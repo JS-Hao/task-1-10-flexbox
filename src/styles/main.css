@@ -1,0 +1,45 @@
+@charset "utf-8";
+body, div {
+	margin: 0;
+	padding: 0;
+}
+.flex-container {
+	padding: 20px;
+	border: 1px #ccc solid;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.flex-item {
+	margin: 5px;
+	width: 150px;
+	border: 1px #f00 solid;
+}
+.one {
+	height: 120px;
+}
+.two {
+	height: 100px;
+}
+.three {
+	height: 40px;
+}
+.four {
+	height: 200px;
+	border: 1px #0f0 solid;
+
+	order: -1;
+}
+
+/*屏幕宽度判断*/
+@media screen and (min-width: 641px){
+	.flex-container {
+		align-items: center;
+		min-width: 648px;
+    }
+	.four {
+		order: 1;
+	}
+}
